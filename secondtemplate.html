@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link type="text/css" rel="stylesheet" href="https://www.dropbox.com/s/example/resume.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #header {
+            position: fixed;
+            z-index: 1;
+            width: 100%;
+            background-color: #668284;
+            color: #ffffff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #name, #email {
+            font-size: 16px;
+            margin: 0;
+            display: inline;
+            border: 1px dashed transparent; /* To keep editable content style consistent */
+        }
+
+        #contact {
+            margin: 20px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+
+        .container {
+            margin-top: 60px; /* to avoid overlap with fixed header */
+            padding: 20px;
+            background-color: #E3EDD8;
+        }
+
+        #footer {
+            height: 40px;
+            background-color: #C1E3E1;
+            text-align: center;
+            padding: 10px;
+        }
+
+        h3 {
+            text-decoration: underline;
+            border: 1px dashed transparent;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td {
+            padding: 8px;
+            border: 1px solid #E88741;
+            border-radius: 4px;
+            border: 1px dashed transparent; /* To keep editable content style consistent */
+        }
+
+        .editable {
+            border: 1px dashed transparent;
+            padding: 5px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .editable:focus {
+            outline: none;
+            border-color: #0056b3;
+            background-color: #f9f9f9;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        
+        <h3 contenteditable="true">CV Highlights</h3>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true">Currently going through CS253 – Web Application Engineering and CS61A – Structure & Interpretation of Computer Programs</li>
+                <li contenteditable="true">Learnt basic Python, JavaScript, HTML, CSS on Codecademy.com.</li>
+                <li contenteditable="true">An independent, dedicated, efficient person. These attributes are proved through the series of courses I have taken or I am taking as of now independently through online platforms.</li>
+                <li contenteditable="true">Good Communication Skills, Presentation Skills, attitude towards leadership, authorisation and delegation, conflict resolution and negotiation and a very good team worker.</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Professional Experience</h3>
+        <h4 class="editable" contenteditable="true">Example Company Pvt Ltd</h4>
+        <p class="editable" contenteditable="true"><strong contenteditable="true">Example Job Title (Example Role)</strong></p>
+        <p class="editable" contenteditable="true">Job Responsibilities</p>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true">Answer customer queries over email / ticketing system</li>
+                <li contenteditable="true">Interact with our engineering team to get software issues and bugs resolved</li>
+                <li contenteditable="true">Occasionally interact with customers over Skype or telephone</li>
+                <li contenteditable="true">Contribute ideas to the team on how customers can be delighted</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Educational Qualifications</h3>
+        <table class="editable" contenteditable="true">
+            <tr>
+                <td contenteditable="true">Qualification</td>
+                <td contenteditable="true">Board</td>
+                <td contenteditable="true">Percentage / Grades</td>
+                <td contenteditable="true">Year</td>
+            </tr>
+            <tr>
+                <td contenteditable="true">S.S.C</td>
+                <td contenteditable="true">G.S.E.B India</td>
+                <td contenteditable="true">75.57%</td>
+                <td contenteditable="true">2004</td>
+            </tr>
+            <tr>
+                <td contenteditable="true">H.S.C (Science Stream)</td>
+                <td contenteditable="true">G.S.E.B India</td>
+                <td contenteditable="true">72.40%</td>
+                <td contenteditable="true">2006</td>
+            </tr>
+            <tr>
+                <td contenteditable="true">GDCA (Grad. Dipl in Computer Applications)</td>
+                <td contenteditable="true">NIE (National Institute Of Engineering), Mumbai, India</td>
+                <td contenteditable="true">A Grade</td>
+                <td contenteditable="true">2008</td>
+            </tr>
+            <tr>
+                <td contenteditable="true">B.Sc. (Hons) - Applied Accounting</td>
+                <td contenteditable="true">Oxford Brookes University</td>
+                <td contenteditable="true">2:1 – Upper Second Class Honours</td>
+                <td contenteditable="true">2012</td>
+            </tr>
+            <tr>
+                <td contenteditable="true">Chartered Accounting - ACCA</td>
+                <td contenteditable="true">ACCA Glasgow, UK</td>
+                <td contenteditable="true">Passed (1st Attempt)</td>
+                <td contenteditable="true">2013</td>
+            </tr>
+        </table>
+        <h3 contenteditable="true">Independent Courses</h3>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">HTML & CSS for Beginners – Web Fundamentals</span> – Codecademy.com</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Python – Fundamentals and Dynamic Programming</span> – Codecademy.com</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">JavaScript – Programming Basics, JS Apps and Build Games</span> – Codecademy.com</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">CS101: Introduction to Computer Science - Building a Web Crawler</span> – Udacity.com</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">CS50x – Introduction to Computer Science I</span> – edX.org & Harvard University</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Calculus One</span> – Ohio State University & Coursera.org</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Introduction to Finance</span> – Coursera.org & University of Michigan</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Technical Skills</h3>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Operating Systems:</span> DOS, Windows 98, Windows 2000, Windows XP, Windows NT, Windows Server 2003, Windows Vista, Windows 7, Macintosh Computers (OS X), Linux (Ubuntu, Fedora)</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Application Software:</span> Office 97-2003; Office XP, Office 2007, Office for Mac 2011, iWork ’09, Sage Accounting Software, Sage 50 (Accounting Software), Excel 2003/2007 for Financial Modelling spreadsheets.</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Programming Skills:</span> HTML, CSS, Python, JavaScript, learning C and C++</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Certifications / Awards</h3>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true">Scored highest in ACCA P1 – Governance, Risk & Ethics exam – June 2012 session amongst full time international students at Kaplan Financial, London.</li>
+                <li contenteditable="true">Interviewed by ACCA for “international ACCA student in UK”, interview published in January 2012 edition of ACCA Student Accountant Magazine.</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Personal Information</h3>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true">A young, determined hard and smart working person. I believe in task based roles and complete ownership of work.</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Languages Known:</span> English, Hindi, Gujarati and Sindhi</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Hobbies:</span> I love reading Finance and IT related books / magazines, playing Chess, swimming, listening to music, surfing the Internet, self-learning through e-courses.</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Other Information</h3>
+        <p class="editable" contenteditable="true">
+            <ul>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Expected Salary:</span> As per company standards</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Area of Interest:</span> Software Development, Programming, Start-ups, Coding, App Development, Technical Support, Support Engineer, Customer Happiness, Client service, Investment Banking, Corporate Finance, Hedge Funds, Mergers & Acquisitions, Analyst, Equity Research, Business Analysis</li>
+                <li contenteditable="true"><span class="course-name" contenteditable="true">Joining Date:</span> Immediate</li>
+            </ul>
+        </p>
+        <h3 contenteditable="true">Declaration</h3>
+        <p class="editable" contenteditable="true">
+            I hereby declare that the details furnished above are true and correct to the best of my knowledge and belief.
+        </p>
+    </div>
+
+    <div id="footer">
+        <p>&copy; 2024 <span contenteditable="true">Example Name</span>. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.getElementById('download-pdf').addEventListener('click', function () {
+            const element = document.body; // Capture the entire body
+            const opt = {
+                margin:       1,
+                filename:     'resume.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 2 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+            
+            html2pdf().from(element).set(opt).save();
+        });
+    </script>
+</body>
+</html>

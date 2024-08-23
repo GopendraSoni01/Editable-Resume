@@ -1,0 +1,160 @@
+:root {
+    --font-family: 'IA Writer Quattro';
+    --color-text: #24292e;
+    --color-background: #fff;
+    --color-border: #e1e4e8;
+    --color-link: #0366d6;
+    --color-link-hover: #005cc5;
+    --color-code-background: #f6f8fa;
+    --color-code-text: #24292e;
+    --button-bg: #0366d6;
+    --button-bg-hover: #005cc5;
+    --separator-border: #ddd; /* Border color for separation lines */
+}
+
+body {
+    font-family: var(--font-family), -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding: 0;
+}
+
+.markdown-body {
+    max-width: 980px;
+    min-width: 200px;
+    padding: 24px 16px;
+    margin: 0 auto;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-size: 16px;
+    line-height: 1.5;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+.markdown-body * {
+    box-sizing: border-box;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3 {
+    margin: 0;
+    padding-bottom: 0;
+    font-weight: 700;
+}
+
+.markdown-body h1 {
+    font-size: 30px;
+    line-height: 38px;
+}
+
+.markdown-body h2 {
+    margin: 8px 0;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.markdown-body h3 {
+    margin: 20px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.markdown-body p {
+    margin: 0 0 10px;
+}
+
+.markdown-body a {
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.markdown-body a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+.markdown-body ul {
+    padding-left: 2em;
+    margin: 0 0 1em;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.markdown-body ul li {
+    margin: 0.25em 0;
+}
+
+.markdown-body code {
+    padding: 0.2em 0.4em;
+    background-color: var(--color-code-background);
+    border: 1px solid var(--color-border);
+    border-radius: 3px;
+    color: var(--color-code-text);
+    font-size: 85%;
+}
+
+/* Add separation lines between segments */
+.markdown-body section {
+    border-bottom: 1px solid var(--separator-border);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.markdown-body .button {
+    display: block;
+    padding: 16px 20px;
+    margin: 48px auto 0;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-bg);
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    white-space: nowrap;
+}
+
+.markdown-body .button:hover {
+    background-color: var(--button-bg-hover);
+    border-color: var(--button-bg-hover);
+}
+
+.markdown-body .hide-for-web {
+    display: none;
+}
+
+.page-break {
+    page-break-after: always;
+}
+
+@page {
+    margin: 24px 16px;
+}
+
+@media print {
+    .markdown-body {
+        font-size: 14px;
+    }
+
+    .markdown-body ul {
+        font-size: 12px;
+    }
+
+    .markdown-body .hide-for-web {
+        display: block !important;
+    }
+
+    .markdown-body .hide-for-pdf {
+        display: none !important;
+    }
+}
